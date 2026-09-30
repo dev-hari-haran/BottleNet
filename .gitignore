@@ -19,26 +19,22 @@ venv/
 env/
 ENV/
 
-# Large Datasets & Binary Cached Files
+# Datasets (Allow essential adjacency matrices)
 Data/*.h5
-Data/*.pkl
 Data/processed/
 *.h5
-*.pkl
 my_speed.csv
 
-# Generated Outputs, Logs, Checkpoints & PDF Reports
+!Data/adj_mx.pkl
+!Data/adj_mx_bay.pkl
+
+# Generated Outputs, Logs & PDF Reports
 outputs/graphs/*.png
 outputs/graphs/*.html
 outputs/logs/*.pdf
-outputs/logs/*.pt
 outputs/logs/*.json
 outputs/logs/*.log
-outputs/logs/checkpoints/
 *.pdf
 
-# IDE / OS settings
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
+# Track essential model checkpoint
+!outputs/logs/checkpoints/best.pt
