@@ -236,12 +236,12 @@ def build_pdf():
         [Paragraph("Student ID", tbl_cell_bold), Paragraph("LD-1786528191214", tbl_cell)],
         [Paragraph("Project ID", tbl_cell_bold), Paragraph("ML-T2-065", tbl_cell)],
         [Paragraph("Model Name", tbl_cell_bold), Paragraph("BottleNet (3-Layer Residual GCN)", tbl_cell)],
-        [Paragraph("Organization", tbl_cell_bold), Paragraph("Navion Robotics Pvt. Ltd., Thanjavur", tbl_cell)],
+        [Paragraph("Organization", tbl_cell_bold), Paragraph("BottleNet Research", tbl_cell)],
         [Paragraph("Institution", tbl_cell_bold), Paragraph("Learn Depth Academy LLP", tbl_cell)],
         [Paragraph("Track", tbl_cell_bold), Paragraph("Track 2 — Advanced ML Internship", tbl_cell)],
         [Paragraph("Dataset Evaluated", tbl_cell_bold), Paragraph("METR-LA (Los Angeles Highway Network)", tbl_cell)],
         [Paragraph("Date of Submission", tbl_cell_bold), Paragraph("September 2026", tbl_cell)],
-        [Paragraph("Code Repository", tbl_cell_bold), Paragraph("<a href='https://github.com/hiyana/BottleNet' color='#1A237E'><u>github.com/hiyana/BottleNet</u></a>", tbl_cell)]
+        [Paragraph("Code Repository", tbl_cell_bold), Paragraph("<a href='https://github.com/dev-hari-haran/BottleNet' color='#1A237E'><u>github.com/dev-hari-haran/BottleNet</u></a>", tbl_cell)]
     ]
 
     t_meta = Table(meta_data, colWidths=[140, 280])
