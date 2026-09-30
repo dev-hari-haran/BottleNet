@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# PyTest & Cache
+.pytest_cache/
+.cache/
+
+# Streamlit
+.streamlit/
+
+# Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Large Datasets & Binary Cached Files
+Data/*.h5
+Data/*.pkl
+Data/processed/
+*.h5
+*.pkl
+my_speed.csv
+
+# Generated Outputs, Logs, Checkpoints & PDF Reports
+outputs/graphs/*.png
+outputs/graphs/*.html
+outputs/logs/*.pdf
+outputs/logs/*.pt
+outputs/logs/*.json
+outputs/logs/*.log
+outputs/logs/checkpoints/
+*.pdf
+
+# IDE / OS settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
