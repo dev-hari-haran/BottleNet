@@ -33,10 +33,10 @@ except ImportError as e:
     st.error(f"Failed to import BottleNet core modules: {e}")
     st.stop()
 
-# 3. Custom CSS Injection — High Contrast Light Theme with Automatic Text vs BG Distinction
+# 3. Custom CSS Injection — Pure White Light Theme with Zero Emojis
 st.markdown("""
 <style>
-  /* Force clean white background */
+  /* Force white background everywhere */
   .stApp { 
     background-color: #FFFFFF !important; 
   }
@@ -44,44 +44,28 @@ st.markdown("""
     background-color: #F8F8F8 !important;
     border-right: 1px solid #E0E0E0;
   }
-  
-  /* Universal text color enforcement for high contrast against light background */
-  .stApp, .main, .block-container, p, span, label, h1, h2, h3, h4, h5, h6,
-  [data-testid="stMarkdownContainer"] p,
-  [data-testid="stHeader"],
-  [data-testid="stWidgetLabel"] {
-    color: #1A1A2E !important;
-  }
-
-  /* Input fields — white background with dark text */
-  div[data-baseweb="input"] input, div[data-baseweb="input"] {
+  /* Remove all default Streamlit dark overrides */
+  .stApp, .main, .block-container {
     background-color: #FFFFFF !important;
     color: #1A1A2E !important;
-    border: 1px solid #CCCCCC !important;
   }
-
-  /* Primary Button — vibrant green background with high-contrast bold white text */
+  /* Green primary button */
   .stButton > button {
     background-color: #2ECC71 !important;
     color: #FFFFFF !important;
     border: none !important;
     border-radius: 6px !important;
     padding: 12px 32px !important;
-    font-size: 15px !important;
-    font-weight: 600 !important;
+    font-size: 15px !weight: 600 !important;
     width: 100% !important;
     cursor: pointer !important;
     transition: background-color 0.2s ease;
-  }
-  .stButton > button p, .stButton > button span {
-    color: #FFFFFF !important;
   }
   .stButton > button:hover {
     background-color: #27AE60 !important;
     color: #FFFFFF !important;
   }
-
-  /* Metric cards — white background with dark text */
+  /* Clean metric cards */
   .metric-card {
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
@@ -91,30 +75,29 @@ st.markdown("""
   }
   .metric-label {
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #666666 !important;
+    color: #888888;
     margin-bottom: 8px;
   }
   .metric-value {
     font-size: 32px;
     font-weight: 700;
-    color: #1A1A2E !important;
+    color: #1A1A2E;
   }
-  .metric-value.red { color: #E74C3C !important; }
-  .metric-value.green { color: #2ECC71 !important; }
+  .metric-value.red { color: #E74C3C; }
+  .metric-value.green { color: #2ECC71; }
   
   /* Section headers */
   .section-title {
     font-size: 18px;
     font-weight: 700;
-    color: #1A1A2E !important;
+    color: #1A1A2E;
     margin-bottom: 16px;
     padding-bottom: 8px;
     border-bottom: 2px solid #2ECC71;
   }
-
   /* Sidebar biography card */
   .bio-card {
     background: #FFFFFF;
@@ -129,7 +112,7 @@ st.markdown("""
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #777777 !important;
+    color: #888888;
     margin-top: 10px;
   }
   .bio-label:first-child {
@@ -137,11 +120,10 @@ st.markdown("""
   }
   .bio-value {
     font-size: 13px;
-    color: #1A1A2E !important;
+    color: #1A1A2E;
     margin-top: 2px;
-    font-weight: 600;
+    font-weight: 500;
   }
-
   /* Speed context badge */
   .speed-badge {
     padding: 12px 16px;
@@ -151,36 +133,32 @@ st.markdown("""
     margin-top: 8px;
     line-height: 1.4;
   }
-
-  /* Explanation box — light green background with dark navy text */
+  /* Explanation box */
   .explanation-box {
     background: #F0FFF4;
     border: 1px solid #2ECC71;
     border-radius: 6px;
     padding: 16px;
     font-size: 14px;
-    color: #1A1A2E !important;
+    color: #1A1A2E;
     line-height: 1.6;
   }
-
   /* Divider */
   hr {
     border: none;
     border-top: 1px solid #E0E0E0;
     margin: 24px 0;
   }
-
-  /* Dataframe table styling — dark text on light background */
-  [data-testid="stDataFrame"], .dataframe, table, th, td {
-    color: #1A1A2E !important;
-    background-color: #FFFFFF !important;
+  /* Table styling */
+  .dataframe {
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 6px;
   }
-
   /* Footer */
   .footer {
     text-align: center;
     font-size: 12px;
-    color: #888888 !important;
+    color: #AAAAAA;
     margin-top: 48px;
     padding-top: 16px;
     border-top: 1px solid #E0E0E0;
